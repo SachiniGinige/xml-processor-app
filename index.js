@@ -9,18 +9,17 @@ function loadViewFile(filepath) {
   xmlHttpReq.send();
 }
 
-function LoadRSSFeed() {
-  // <---------------------------load rss file---------------------------------------->
+// Extract data from RSS Feed saved in files and add to database
+function ProcessRSS() {
   let xmlHttpReq1 = new XMLHttpRequest();
 
-  xmlHttpReq1.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      // ProcessRSSFeed(this.responseXML);
-      document.getElementById("test").innerHTML = this.responseText;
-    }
-  };
-  // xmlHttpReq1.open("GET", "./files/books_extract.rss", true);
-  xmlHttpReq1.open("GET", "./books/add.php", true);
+  // xmlHttpReq1.onreadystatechange = function () {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     document.getElementById("test").innerHTML = this.responseText;
+  //   }
+  // };
+
+  xmlHttpReq1.open("GET", "./books/add_multiple.php", true);
   xmlHttpReq1.send();
 }
 
@@ -36,6 +35,19 @@ function UpdateXMLFile() {
   xmlHttpReq3.open("GET", "./books/create_xml.php", true);
   xmlHttpReq3.send();
 }
+
+// function LoadRSSFeed() {
+//   // <---------------------------load rss file---------------------------------------->
+//   let xmlHttpReq1 = new XMLHttpRequest();
+
+//   xmlHttpReq1.onreadystatechange = function () {
+//     if (this.readyState == 4 && this.status == 200) {
+//       ProcessRSSFeed(this.responseXML);
+//     }
+//   };
+//   xmlHttpReq1.open("GET", "./files/books_extract.rss", true);
+//   xmlHttpReq1.send();
+// }
 
 // async function ProcessRSSFeed(xmlDocument) {
 //   // <-------------------extract data and add to json format----------------------------->
@@ -83,7 +95,7 @@ function UpdateXMLFile() {
 
 //     xmlHttpReq2.open(
 //       "GET",
-//       "./books/add_multiple.php" + "?params=" + JSON.stringify(bkData),
+//       "./books/add_multiple1.php" + "?params=" + JSON.stringify(bkData),
 //       true
 //     );
 //     xmlHttpReq2.setRequestHeader(
@@ -99,7 +111,7 @@ function UpdateXMLFile() {
 
 //   // xmlHttpReq2.open(
 //   //   "GET",
-//   //   "./books/add_multiple.php" + "?params=" + JSON.stringify(params),
+//   //   "./books/z_add_multiple1.php" + "?params=" + JSON.stringify(params),
 //   //   true
 //   // );
 //   // xmlHttpReq2.setRequestHeader(

@@ -26,8 +26,13 @@
                "average_rating" => $bkValues["average_rating"] , "book_small_image_url" => $bkValues["book_small_image_url"] ,
                "book_medium_image_url" => $bkValues["book_medium_image_url"] , "book_large_image_url" => $bkValues["book_large_image_url"] ];
 
-          echo json_encode($content);
+          // echo json_encode($content);
 
-          $result = $db->books->insertOne($content);    
+          try{
+               $result = $db->books->insertOne($content); 
+          }  
+          catch(Exception $e){
+               echo $e->message();
+          } 
      }
 ?>
