@@ -33,5 +33,7 @@
         echo "\r\n","Exception:", $e->getMessage(), "\n";
     }
 
+    require './download_xml.php';
+
     header('location: ../index.php');
 ?>
