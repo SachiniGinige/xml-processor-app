@@ -22,8 +22,10 @@
       echo "Sorry, there was an error uploading your file.";
     }
   }
-
   rename($target_file,$target_dir."/books_extract.xml");
+
+  require './add_multiple.php';
 
   header('Location: ../.');
 ?>
+
