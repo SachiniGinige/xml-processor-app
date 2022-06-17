@@ -1,5 +1,6 @@
 <?php
-    require_once __DIR__ . '/../mongodb/vendor/autoload.php';  
+    // require_once __DIR__ . '/../mongodb/vendor/autoload.php';  
+    require_once __DIR__ . '/vendor/autoload.php';  
         
     try {
         $client = (new MongoDB\Client(
