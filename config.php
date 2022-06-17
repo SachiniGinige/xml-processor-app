@@ -11,6 +11,7 @@
 
         $db = $client->xml_processor_book_db;   
         // echo "\r\nSuccessfully connected to MongoDB database ", $db, "! : )","\r\n"; //
+
     } catch (MongoDB\Driver\Exception\ConnectionException $e) {
         echo "ConnectionException:", $e->getMessage(), "\n";   
     } catch (MongoDB\Driver\Exception\ConnectionTimeoutException $e) {

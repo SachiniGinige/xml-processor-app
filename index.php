@@ -1,8 +1,9 @@
-
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="./images/book-shelf.ico" type="image/icon type">
     <title>Book Nook</title>
     <link
       rel='stylesheet'
@@ -13,16 +14,29 @@
     <!-- <link rel='stylesheet' href='./index.css'/> -->
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./images/book-shelf.png" width="80" height="80"  alt="" style="margin:-2vh 0;">
+        <span style="font-weight:bold">Book Nook</span>
+      </a>
+    </nav>
+
     <div class='container'>
       <br />
-      <!-- <h1 style='text-align: center'>A Booklover's Dream</h1> -->
       <br /><br />
 
       <div id='display-section' class='container'>
+        <div id="test"></div>
 
-        <?php require './config.php'; ?>
+        <form method="POST" action="./books/upload_rss_file.php">
+          <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss">Choose File</input>
+          <button type="submit">Submit</button>
+        </form>
 
-        <button onclick='loadDoc()'>Process RSS</button>
+
+        <button onclick='LoadRSSFeed()'>Process RSS</button>
+        <button onclick='UpdateXMLFile()'>Update XML Export</button>
         
       </div>
     </div>
