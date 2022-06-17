@@ -18,8 +18,8 @@
 <?php require "./books/view_all.php" ?>
 
 <br /><br />
-<!-- < ?php echo "<button type='button' onclick=  'loadViewFile(\"./views/create_view.php\")'  class='btn btn-success'>Add Article</button>"; ?>
+<!-- < ?php echo "<button type='button' onclick='loadViewFile(\"./views/create_view.php\")'  class='btn btn-success'>Add Article</button>"; ?>
 &nbsp &nbsp &nbsp -->
-<button class='btn btn-info' onclick='UpdateXMLFile()'>Export to XML</button>
+<!-- <button class='btn btn-info' onclick='UpdateXMLFile()'>Export to XML</button> -->
 <br /><br />
 

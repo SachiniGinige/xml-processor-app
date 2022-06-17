@@ -9,7 +9,7 @@ function loadViewFile(filepath) {
   xmlHttpReq.send();
 }
 
-// Extract data from RSS Feed saved in files and add to database
+// //Extract data from RSS Feed saved in files and add to database
 function ProcessRSS() {
   let xmlHttpReq1 = new XMLHttpRequest();
 
