@@ -1,9 +1,8 @@
-function loadDoc(filepath) {
-  let xmlHttpReq = new XMLHttpRequest();
-
+function loadViewFile(filepath) {
+  const xmlHttpReq = new XMLHttpRequest();
   xmlHttpReq.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      //
+      document.getElementById("display-section").innerHTML = this.responseText;
     }
   };
   xmlHttpReq.open("POST", filepath, true);

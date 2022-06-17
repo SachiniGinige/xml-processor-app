@@ -11,7 +11,7 @@
       integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
       crossorigin='anonymous'
     />
-    <!-- <link rel='stylesheet' href='./index.css'/> -->
+    <link rel='stylesheet' href='./index.css'/>
   </head>
   <body>
     <!-- Navbar -->
@@ -26,19 +26,20 @@
       <br />
       <br /><br />
 
-      <div id='display-section' class='container'>
-        
-        
+      <div id='display-section' class='container'>       
+        <?php require './views/homepage_view.php' ?>       
       </div>
+
       <div id="test"></div>
 
-        <form method="POST" action="./books/upload_rss_file.php" enctype="multipart/form-data">
-          <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss"></input>
-          <button type="submit" name="submit">Submit</button>
-        </form>
+      <form method="POST" action="./books/upload_rss_file.php" enctype="multipart/form-data">
+        <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss"></input>
+        <button type="submit" name="submit">Submit</button>
+      </form>
 
-        <button onclick='LoadRSSFeed()'>Process RSS</button>
-        <button onclick='UpdateXMLFile()'>Update XML Export</button>
+      <button onclick='LoadRSSFeed()'>Process RSS</button>
+      <button onclick='UpdateXMLFile()'>Update XML Export</button>
+
     </div>
     
     <script src='./index.js'></script>
