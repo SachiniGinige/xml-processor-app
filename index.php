@@ -27,18 +27,18 @@
       <br /><br />
 
       <div id='display-section' class='container'>
-        <div id="test"></div>
+        
+        
+      </div>
+      <div id="test"></div>
 
-        <form method="POST" action="./books/upload_rss_file.php">
-          <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss">Choose File</input>
-          <button type="submit">Submit</button>
+        <form method="POST" action="./books/upload_rss_file.php" enctype="multipart/form-data">
+          <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss"></input>
+          <button type="submit" name="submit">Submit</button>
         </form>
-
 
         <button onclick='LoadRSSFeed()'>Process RSS</button>
         <button onclick='UpdateXMLFile()'>Update XML Export</button>
-        
-      </div>
     </div>
     
     <script src='./index.js'></script>
