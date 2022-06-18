@@ -23,6 +23,9 @@
                 $finalResult = $finalResult.', '.$res;
             }
         }
+        if($finalResult===''){
+            $finalResult="<i>None found</i>";
+        }
     }
 
     echo $finalResult;

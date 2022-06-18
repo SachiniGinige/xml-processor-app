@@ -10,7 +10,7 @@
         </div> -->
         <div class="row">
                 <div class='col-4'></div>                      
-                <div class='col' id='search-results'></div>
+                <div class='col' id='search-results' style='color:gray'></div>
         </div>   
 <!-- </div> -->
 
@@ -20,10 +20,4 @@
         require_once './config.php';
         require "./books/view_all.php" 
 ?>
-
-<br /><br />
-<!-- < ?php echo "<button type='button' onclick='loadViewFile(\"./views/create_view.php\")'  class='btn btn-success'>Add Article</button>"; ?>
-&nbsp &nbsp &nbsp -->
-<!-- <button class='btn btn-info' onclick='UpdateXMLFile()'>Export to XML</button> -->
-<br /><br />
 
