@@ -4,6 +4,7 @@
 <form method="POST" action="./books/upload_rss_file.php" enctype="multipart/form-data">
     <input type="file" id="my_upload" name="my_upload" accept=".xml, .rss"></input>
     <button type="submit" name="submit" class='btn btn-success'>Upload</button>
+    <?php echo "<a type='button' href='./' class='btn btn-primary' > Back </a>"; ?>
 </form>
 
     
